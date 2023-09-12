@@ -1,6 +1,6 @@
 game:GetService("StarterGui"):SetCore("SendNotification",{
 	Title = "Welcome", -- Required
-	Text = "Made By Spect / Blukez", -- Required
+	Text = "Made By ZsploitZ", -- Required
 })
 
 libary = {}
