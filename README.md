@@ -682,15 +682,9 @@ function libary:CreateMain()
 
 
 		function RespawnScript()
-			local char = game.Players.LocalPlayer.Character
-			if char:FindFirstChildOfClass("Humanoid") then char:FindFirstChildOfClass("Humanoid"):ChangeState(15) end
-			char:ClearAllChildren()
-			local newChar = Instance.new("Model")
-			newChar.Parent = workspace
-			game.Players.LocalPlayer.Character = newChar
-			wait(.001)
-			game.Players.LocalPlayer.Character = char
-			newChar:Destroy()
+			ResetCharacter.MouseButton1Click:connect(function()
+	game.Players.LocalPlayer.Character.Head:Destroy()
+end)
 		end
 
 		local Tween = TweenService:Create(btn, TweenInfomation, { ImageColor3 = Color3.fromRGB(255, 255, 255) })
